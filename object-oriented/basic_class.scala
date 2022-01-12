@@ -1,9 +1,9 @@
 // A very basic class
 
 class User(n: String) {
-	val name: String = n
-	def greet: String = s"Hello $name"
-    override def toString = "My name is " + name
+  val name: String = n
+  def greet: String = s"Hello $name"
+  override def toString = "My name is " + name
 }
 
 val u1 = new User("Tom")
@@ -15,4 +15,3 @@ for (elem <- myList) {
   println(elem)
   println(elem.greet)
 }
-

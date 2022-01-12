@@ -1,11 +1,11 @@
 object factorial {
-    def main(args: Array[String]) {
+    def main(args: Array[String]):Unit = {
         println(factorial(10))
 
     }
 
     def factorial(n: Long): Long = {
-        if (n == 0) 
+        if (n == 0)
             1
         else
             n * factorial(n-1)

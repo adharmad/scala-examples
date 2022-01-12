@@ -1,17 +1,28 @@
 // abstract classes
 
+// abstract class Car
 abstract class Car {
   val year: Int
-  val automatic: Boolean = true
+  val electric: Boolean
   def make: String
+  override def toString = make + " car from year " + year + " and is " + (if (electric) "" else "not") + " electric"
 }
 
-class Toyota(val year: Int) extends Car {
+// concrete class Toyota
+class Toyota(val year: Int, val electric: Boolean) extends Car {
   def make = "Toyota"
 }
 
-// this will raise error
-//val c = new Car() 
+// concrete class Tesla
+class Tesla(val year: Int, val electric: Boolean) extends Car {
+  def make = "Tesla"
+}
 
-val c1 = new Toyota(2006)
-println (c1)
+// this will raise error
+//val c = new Car()
+
+val car1 = new Toyota(2006, false)
+println (car1)
+
+val car2 = new Tesla(2016, true)
+println (car2)
